@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Objects</title>
+</head>
+<body>
+  <script>
+    var a
+    var b
+    a = 2
+    b = 3
+    var c = 5
+
+    console.log('a=2, b=3', a == b)
+    b = 2
+    console.log('a=2, b=2', a == b)
+
+    a = { a: 1, b: 3}
+    b = { a: 1, b: 3}
+    console.log('a={}, b={}', a == b)
+    b = a
+    console.log(', b=a', a == b)
+
+    function m(d){
+      d++
+      console.log('Funkcijas parametrs ', d)
+    }
+
+    function n(o){
+      o.a = 77
+      console.log('lokalais objekts', o)
+    }
+
+    n(a)
+
+    console.log('objekts a pec funkcijas', a)
+
+    m(c)
+    console.log('Globalais mainigai ', c)
+
+  </script>
+</body>
+</html>
